@@ -377,6 +377,10 @@ img {
         width: 180px;
         height: 40px;
     }
+
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media(max-width: 576px) {
