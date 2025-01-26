@@ -32,6 +32,10 @@ img {
     max-width: 100%;
 }
 
+:target {  
+    scroll-margin-top: 6rem; /* Match the height of the navbar */  
+}  
+
 /* Utility Classes */
 
 .container {
@@ -41,6 +45,7 @@ img {
 }
 
 /* Section Header */
+
 .section-header {
     max-width: 750px;
     margin: 0 auto;
@@ -91,7 +96,6 @@ img {
     margin: 4rem 0;
 }
 
-
 /* Text Classes */
 
 .text-primary {
@@ -109,6 +113,7 @@ img {
     color: white;
     padding: 1rem 2rem;
     position: fixed;
+    height: 6rem;
     top: 0;
     left: 0;
     right: 0;
@@ -294,6 +299,7 @@ img {
     font-weight: 700;  
     color: var(--dark-color);  
     margin-bottom: 1rem;  
+    scroll-margin-top: 6rem;
 }  
 
 .value-proposition p {  
