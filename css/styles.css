@@ -40,6 +40,58 @@ img {
     padding: 0 2rem;
 }
 
+/* Section Header */
+.section-header {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+}
+
+.heading-border {
+    width: 64px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.3rem 2.3rem;
+    border: 1px solid var(--light-color);
+    border-radius: 32px;
+    background: var(--primary-color);
+    color: var(--light-color);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 18px;
+    font-weight: 600;    
+}
+
+.btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: #fff;
+    transform: scale(1.05);
+}
+
+.section {
+    margin: 4rem 0;
+}
+
+
 /* Text Classes */
 
 .text-primary {
@@ -132,42 +184,61 @@ img {
 }
 
 /* Hero */
+
 .hero {
-    background: rgba(0, 0, 0, 0.3) url('../images/header-background.jpg') center center/cover no-repeat;
-    height: 700px;
+    background: rgba(0, 0, 0,  0.1) url('../images/hero_bkg.jpg') center center/cover no-repeat;
     padding: 11.5rem 2rem 8rem;
     color: #fff;
-    overflow-x: hidden;
-    position: relative;
+    overflow: hidden;
+    position: relative;    
 }
+
+.hero::before {  
+    content: '';  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    background: rgba(0, 0, 0, 0.5);  
+    z-index: 1;
+}  
 
 .hero .hero-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 6rem 8rem;
+    gap: 6rem 8rem;    
 }
 
-.hero h1 {
-    font-family: 'Black Ops One', serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3.5rem;
+.hero-content {  
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {  
+    font-size: 4rem;
+    font-family: "Black Ops One", serif;
     line-height: 1.2;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+} 
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
-    line-height: 1.8;
-    font-weight: 400;
-}
+.hero-content p {  
+    font-size: 1.5rem;
+    line-height: 1.5; 
+    color: #fff;  
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+} 
 
 .hero img {
-    width: 100%;
-    margin-right: -100px;
+    width: 80%;
+    margin-right: 150px;
+    animation: slideInFromRight 0.8s ease-out forwards;
+    opacity: 0;
+    z-index: 3; 
 }
 
 .hero .frame-decoration {
@@ -178,6 +249,102 @@ img {
     width: 100%;
     height: 100px;
 }
+
+/* Animation */  
+@keyframes fadeInUp {  
+    0% {  
+        opacity: 0;  
+        transform: translateY(300px);  
+    }  
+    100% {  
+        opacity: 1;  
+        transform: translateY(0);  
+    }  
+}  
+
+/* Animation for Image */  
+@keyframes slideInFromRight {  
+    0% {  
+        transform: translateX(100%);
+        opacity: 0;
+    }  
+    100% {  
+        transform: translateX(0);
+        opacity: 1;
+    }  
+}  
+
+.hero-content {  
+    animation: fadeInUp 0.8s ease-out forwards;  
+    opacity: 0;
+}  
+
+/* About Section */  
+.value-proposition {  
+    background-color: var(--light-color);
+    padding: 1.5rem 0 4rem 0;
+}  
+
+.value-proposition .container {  
+    text-align: center;
+}  
+
+.value-proposition h2 {  
+    font-size: 2.5rem;
+    font-weight: 700;  
+    color: var(--dark-color);  
+    margin-bottom: 1rem;  
+}  
+
+.value-proposition p {  
+    font-size: 1.2rem;
+    color: var(--secondary-color);  
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}  
+
+.value-proposition .heading-border {  
+    width: 80px;
+    height: 4px;  
+    background: var(--primary-color);  
+    margin: 1rem auto;
+}  
+
+
+/* Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.75rem;
+    background: #fff;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Service Cards */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0 4rem
+}
+
+.service-cards img {
+    width: 130px;
+    margin-top: 1rem;
+}
+
+.service-cards h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+
 
 /* Media Queries */
 @media(max-width: 1600px) {
