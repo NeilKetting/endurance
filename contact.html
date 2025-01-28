@@ -3,7 +3,197 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Russo+One&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+			integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./css/styles.css" />
 		<title>Contact Us</title>
 	</head>
-	<body></body>
+	<body>
+		<nav class="navbar" role="navigation" aria-label="Main Navigation">
+			<div class="navbar-flex container">
+				<a href="index.html" aria-label="Logo Home Link">
+					<img src="./images/logo.png" alt="Tutor Logo" />
+				</a>
+				<div class="main-menu-items">
+					<ul class="main-menu-list">
+						<li><a href="Home"></a></li>
+						<li><a href="index.html#about">About</a></li>
+						<li><a href="index.html#services">Services</a></li>
+						<li><a href="index.html#projects">Projects</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li>
+							<a
+								href="https://facebook.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Follow Us On Facebook"
+							>
+								<i class="fa-brands fa-facebook"></i>
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://twitter.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Follow Us On Twitter"
+							>
+								<i class="fa-brands fa-twitter"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Mobile Menu -->
+				<div class="mobile-menu">
+					<!-- Hamburger button -->
+					<div
+						class="mobile-menu-toggle"
+						role="button"
+						aria-expanded="false"
+						aria-controls="mobile-menu-items"
+						aria-label="Open mobile menu"
+						tabindex="0"
+					>
+						<i class="fas fa-bars fa-2x"></i>
+					</div>
+					<!-- Mobile Menu Items -->
+					<div id="mobile-menu-items" class="mobile-menu-items">
+						<ul class="mobile-menu-list">
+							<li><a href="Home"></a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li>
+								<a href="https://facebook.com" target="_blank">
+									<i class="fa-brands fa-facebook"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com" target="_blank">
+									<i class="fa-brands fa-twitter"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section class="contact">
+			<div class="container">
+				<h2>Contact Us</h2>
+				<p>We’d love to hear from you! Please fill out the form below.</p>
+				<form action="php/send_mail.php" method="POST">
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" required />
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" required />
+					</div>
+					<div class="form-group">
+						<label for="subject">Subject</label>
+						<input type="text" id="subject" name="subject" required />
+					</div>
+					<div class="form-group">
+						<label for="message">Message</label>
+						<textarea id="message" name="message" rows="5" required></textarea>
+					</div>
+
+					<!-- Honeypot field (hidden) -->
+					<input type="text" name="honeypot" style="display: none" />
+
+					<!-- Google reCAPTCHA -->
+					<div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+					<br />
+					<br />
+					<br />
+
+					<button type="submit" class="btn">Send Message</button>
+				</form>
+			</div>
+		</section>
+
+		<!-- Social -->
+		<section class="social section">
+			<div class="container">
+				<p>Follow us on social media for updates and news.</p>
+				<div class="social-icons">
+					<a
+						href="https://facebook.com"
+						target="_blank"
+						aria-label="Follow Us On Facebook"
+					>
+						<i class="fa-brands fa-facebook fa-2x"></i>
+					</a>
+					<a
+						href="https://twitter.com"
+						target="_blank"
+						aria-label="Follow Us On Twitter"
+					>
+						<i class="fa-brands fa-twitter fa-2x"></i>
+					</a>
+					<a
+						href="https://instagram.com"
+						target="_blank"
+						aria-label="Follow Us On Instagram"
+					>
+						<i class="fa-brands fa-instagram fa-2x"></i>
+					</a>
+					<a
+						href="https://linkdin.com"
+						target="_blank"
+						aria-label="Follow Us On Linkdin"
+						><i class="fa-brands fa-linkedin fa-2x"></i>
+					</a>
+					<a
+						href="https://youtube.com"
+						target="_blank"
+						aria-label="Follow Us On Youtube"
+					>
+						<i class="fa-brands fa-youtube fa-2x"></i>
+					</a>
+					<a
+						href="https://pinterest.com"
+						target="_blank"
+						aria-label="Follow Us On Pinterest"
+					>
+						<i class="fa-brands fa-pinterest fa-2x"></i>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+
+		<footer class="footer">
+			<div class="container footer-flex">
+				<ul class="footer-links">
+					<li><a href="#">Terms</a></li>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<p>
+					&copy; 2024-2025 Endurance Construction (PTY) LTD. All right reserved
+				</p>
+			</div>
+		</footer>
+
+		<script src="./js/script.js"></script>
+		<!-- Link to your JavaScript file -->
+	</body>
 </html>
