@@ -37,39 +37,10 @@ img {
 }  
 
 /* Utility Classes */
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-}
-
-/* Section Header */
-
-.section-header {
-    max-width: 750px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.section-header h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--dark-color);
-    margin-bottom: 0.5rem;
-}
-
-.section-header p {
-    font-size: 1.2rem;
-    color: var(--dark-color);
-}
-
-.heading-border {
-    width: 64px;
-    height: 4px;
-    background: var(--primary-color);
-    margin: 0 auto;
 }
 
 .btn {
@@ -92,10 +63,6 @@ img {
     transform: scale(1.1);
 }
 
-.section {
-    margin: 2rem 0;
-}
-
 /* Text Classes */
 
 .text-primary {
@@ -107,7 +74,6 @@ img {
 }
 
 /* Navbar */
-
 .navbar {    
     background: #f7f7f7;
     color: white;
@@ -152,7 +118,6 @@ img {
 }
 
 /* Mobile Menu */
-
 .mobile-menu {
     display: none;
 }
@@ -189,8 +154,43 @@ img {
     font-size: 1.2rem;
 }
 
-/* Hero */
+/* Section Header */
+.section-header {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
 
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {  
+    font-size: 1.2rem;
+    color: var(--secondary-color);  
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.heading-border {
+    width: 64px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.section {
+    margin: 2rem 0;
+}
+
+/* Hero */
 .hero {
     background: rgba(0, 0, 0,  0.1) url('../images/hero_background.jpg') center center/cover no-repeat;
     padding: 11.5rem 2rem 8rem;
@@ -256,7 +256,7 @@ img {
     height: 100px;
 }
 
-/* Animation */  
+/* Hero Animation */  
 @keyframes fadeInUp {  
     0% {  
         opacity: 0;  
@@ -284,37 +284,14 @@ img {
     animation: fadeInUp 0.8s ease-out forwards;  
     opacity: 0;
 }  
-
+  
 /* About Section */  
 .about {  
     background-color: var(--light-color);
     padding: 1rem 0 1rem 0;
 }
 
-.about h2 {  
-    font-size: 2.5rem;
-    font-weight: 700;  
-    color: var(--primary-color);  
-    margin-bottom: 1rem;  
-    scroll-margin-top: 6rem;
-}  
 
-.about p {  
-    font-size: 1.2rem;
-    color: var(--secondary-color);  
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-}  
-
-.about .heading-border {  
-    width: 80px;
-    height: 4px;  
-    background: var(--primary-color);  
-    margin: 1rem auto;
-    margin-bottom: 1.5rem;
-}  
 
 /* Services */
 .services {  
@@ -322,32 +299,18 @@ img {
     padding: 1rem 0 1rem 0;
 }
 
-.services h2 {  
-    font-size: 2.5rem;
-    font-weight: 700;  
-    color: var(--primary-color);  
-    margin-bottom: 1rem;  
-    scroll-margin-top: 6rem;
-}  
-
-.services p {  
-    font-size: 1.2rem;
-    color: var(--secondary-color);  
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-}  
-
-.services .heading-border {  
-    width: 80px;
-    height: 4px;  
-    background: var(--primary-color);  
-    margin: 1rem auto;
-    margin-bottom: 1.5rem;
+/* Service Card */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0 4rem
 }
 
-/* Card */
+.service-cards h3{
+    color: var(--primary-color);
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -364,63 +327,12 @@ img {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);  
 }  
 
-/* Service Cards */
-.service-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2rem 0 4rem
-}
-
-.services .heading-border{
-    margin-bottom: 2rem;
-}
-
-
-.service-cards img {
-    width: 130px;
-    margin-top: 1rem;
-}
-
-.service-cards h3 {
-    color: var(--primary-color);
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin: 1rem 0;
-}
-
 /* Projects */
 .projects {  
     background-color: var(--light-color);
     padding: 1rem 0 1rem 0;
     margin-bottom: 0;    
 }
-
-.projects h2 {  
-    font-size: 2.5rem;
-    font-weight: 700;  
-    color: var(--primary-color);  
-    margin-bottom: 1rem;  
-    scroll-margin-top: 6rem;
-}  
-
-.projects p {  
-    font-size: 1.2rem;
-    color: var(--secondary-color);  
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-}  
-
-.projects .heading-border {  
-    width: 80px;
-    height: 4px;  
-    background: var(--primary-color);  
-    margin: 1rem auto;
-    margin-bottom: 1.5rem;
-}
-
 
 .carousel {  
     position: relative;  
@@ -433,7 +345,7 @@ img {
 }  
 
 .carousel-item {  
-    min-width: 100%;  
+    min-width: 100%;
     box-sizing: border-box;  
 }  
 
@@ -512,12 +424,7 @@ button.next {
     color: #fff;
     border-top: 1px solid #384653;
     padding: 0.5rem 2rem;
-}
-
-.footer-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
 }
 
 .footer a {
@@ -525,7 +432,7 @@ button.next {
 }
 
 .footer a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .footer ul {
@@ -535,27 +442,32 @@ button.next {
     margin: 2rem 0;
 }
 
-/* Innher Header */
-.inner-header {
-    background: var(--primary-color);
-    color: #fff;
-    height: 250px;
-    padding-top: 8rem;
+.footer-copy p{
+    display: block;
+    align-items: center;
 }
 
-.inner-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+/* Terms Page */
+.terms-header{
+    padding: 6.5rem 1rem 0rem 1rem;
 }
 
-/* Contact Us */
+.terms-content{
+    padding: 1rem 2rem 1rem 2rem;
+}
 
-.contact {  
+/* Privacy Page */
+.privacy-page{
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+/* Contact Us Page */  
+.contact {
     background-color: var(--light-color);  
-    padding: 8rem 2rem 2rem 2rem;  
-    text-align: center;  
-}  
+    padding: 8rem 2rem 4rem 2rem;  
+    text-align: center;  /* This centers inline-level elements like button */  
+    position: relative;
+}
 
 .contact h2 {  
     font-size: 2.5rem;  
@@ -574,41 +486,43 @@ button.next {
 
 .form-group label {  
     display: block;  
-    font-weight: bold;
-    color: var(--dark-color); 
+    font-weight: bold;  
+    color: var(--dark-color);  
     margin-bottom: 0.5rem;  
-}  
-
-.form-group input,  
-.form-group textarea {  
-    width: 100%;  
-    padding: 0.75rem;  
-    border: 1px solid #ccc;  
-    border-radius: 4px;  
 }
-
-.form-group {  
-    margin-bottom: 1rem;  
-}  
 
 /* Adjust width and add drop shadow */  
 input[type="text"],  
 input[type="email"],  
 textarea {  
-    width: 400px !important; /* Change this value to set the desired width */  
+    width: 600px !important; /* Desired input width */  
     max-width: 100%; /* Ensure it is responsive */  
     padding: 10px; /* Add some padding for better appearance */  
     font-size: 16px; /* Adjust font size */  
     border: 1px solid #ccc; /* Add a border */  
     border-radius: 5px; /* Round the corners */  
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Drop shadow */  
-}  
+    resize: none;
+}
 
-/* Adjust textarea width and height */  
-textarea {  
-    height: 100px; /* Set to a smaller height */  
-    resize: none; /* Optional: disable resizing */  
-}  
+.form-btn{
+    margin-top: 2.5rem;
+    position: relative;
+    padding: 1.3rem 2.3rem;
+    border: 1px solid var(--light-color);
+    border-radius: 32px;
+    background: var(--primary-color);
+    color: var(--light-color);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;  
+    transition: all 0.2s;
+}
+
+.form-btn:hover {
+    background: rgba(rgb(255, 230, 3), green, blue, alpha) ;
+    color: rgba(rgb(0, 0, 0), green, blue, alpha);
+}
 
 /* Media Queries */
 @media(max-width: 1600px) {
@@ -621,7 +535,9 @@ textarea {
 }
 
 @media(max-width: 992px) {
-
+    .hero img{
+        display: none;
+    }    
 }
 
 @media(max-width: 768px) {
@@ -644,17 +560,18 @@ textarea {
 
     .service-cards {
         grid-template-columns: 1fr;
+        margin: 1rem 1.5rem;
     }
+
+
+
+
 }
 
 @media(max-width: 576px) {
     .hero {
-        padding-right: 0.2rem;
         padding-left: 0.2rem;
-    }
-
-    .hero img {
-        display: none;
+        padding-right: 0.2rem;
     }
     
     .hero h1 {
