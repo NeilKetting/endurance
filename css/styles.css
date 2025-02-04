@@ -566,6 +566,7 @@ textarea {
     .service-cards {
         grid-template-columns: 1fr;
         margin: 1rem 1.5rem;
+        padding: 1rem 1.5rem;
     }
 
     .social p {
@@ -579,6 +580,18 @@ textarea {
     .footer-flex {
         flex-direction: column;
         text-align: center;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .services p{
+        font-size: 1rem;
+    }
+
+    .projects p{
+        font-size: 1rem;
     }
 }
 
