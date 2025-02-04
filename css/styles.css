@@ -87,6 +87,11 @@ img {
     transition: background-color 0.3s ease-in-out;
 }
 
+.navbar.navbar-scroll {
+    background-color: rgba(150, 150, 150, 0.5);
+    backdrop-filter: blur(10px);
+}
+
 .navbar-flex {
     display: flex;
     justify-content: space-between;
@@ -563,9 +568,18 @@ textarea {
         margin: 1rem 1.5rem;
     }
 
+    .social p {
+        font-size: 1.2rem;
+    }
 
+    .social i {
+        font-size: 2rem;
+    }
 
-
+    .footer-flex {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @media(max-width: 576px) {
