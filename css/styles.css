@@ -38,7 +38,7 @@ img {
 
 /* Utility Classes */
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -164,7 +164,7 @@ img {
     max-width: 750px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .section-header h2 {
@@ -290,18 +290,23 @@ img {
     opacity: 0;
 }  
   
-/* About Section */  
+/* About About */
 .about {  
-    background-color: var(--light-color);
+    display: flex;
+    background: rgba(255, 255, 255, 1) url('../images/section_background.jpeg') center center/cover no-repeat;
     padding: 1rem 0 1rem 0;
 }
 
-
+.about-flex{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.9);
+}
 
 /* Services */
 .services {  
     background-color: #fff;
     padding: 1rem 0 1rem 0;
+    justify-content: center;
 }
 
 /* Service Card */
@@ -385,7 +390,10 @@ button.next {
 }  
 
 .section-header h2 {  
-    color: var(--primary-color);
+    font-size: 3rem;
+    font-family: "Black Ops One", serif;
+    line-height: 1.2;
+    color: #000;
 }
 
 .projects.section{
@@ -425,11 +433,15 @@ button.next {
 
 /* Footer */
 .footer {
-    background: var(--dark-color);
+    background: #5a5a5a;
     color: #fff;
-    border-top: 1px solid #384653;
+    border-top: 1px solid #a8a9aa;
     padding: 0.5rem 2rem;
     text-align: center;
+}
+
+.footer img{    
+    height: 80px;
 }
 
 .footer a {
@@ -467,8 +479,7 @@ button.next {
 }
 
 /* Contact Us Page */  
-.contact {
-    background-color: var(--light-color);  
+.contact {    
     padding: 8rem 2rem 4rem 2rem;  
     text-align: center;  /* This centers inline-level elements like button */  
     position: relative;
