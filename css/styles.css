@@ -485,6 +485,10 @@ button.next {
     margin-bottom: 2rem;  
 }  
 
+.contact-details i{
+    font-size: 2rem;
+}
+
 .form-group {  
     margin-bottom: 1.5rem;  
 }  
@@ -593,6 +597,19 @@ textarea {
     .projects p{
         font-size: 1rem;
     }
+
+    .contact-details p, .contact-details i, .contact-details a {
+        font-size: 1rem;    
+    }
+
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact h3, .contact p{
+        font-size: 1rem;
+    }
+
 }
 
 @media(max-width: 576px) {
@@ -611,5 +628,9 @@ textarea {
 
     .hero img {
         max-width: 350px;
+    }
+
+    .contact-details p, .contact-details i, .contact-details a {
+        font-size: 0.8rem;    
     }
 }
